@@ -1,25 +1,53 @@
 {
+  // see: https://www.typescriptlang.org/tsconfig
   "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "module": "ESNext",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    /* Language and Environment */
+    "jsx": "preserve",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], // コンパイル時に含める組み込みライブラリを指定
+    "target": "ES2020", // コンパイル後のJavaScriptのバージョン
+    "useDefineForClassFields": true, // クラスのプロパティを定義するとき、プロパティ初期化子の使用を強制
+
+    /* Completeness */
     "skipLibCheck": true,
 
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "preserve",
+    /* Type Checking */
+    "strict": true, // 厳格な型チェックがすべて有効になる
+    "noFallthroughCasesInSwitch": true, // switch文を記述するとき、caseブロックの中にbreak文がない場合にエラーとする
+    "noUnusedLocals": true, // 未使用のローカル変数が検出された場合にコンパイルエラーとなる
+    "noUnusedParameters": true, // 未使用の関数パラメータが検出された場合にエラーとなる
 
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    /* Modules */
+    "module": "ESNext", // TypeScriptが生成するJavaScriptのモジュール形式の指定
+    "moduleResolution": "bundler", // モジュールの解決方法の指定
+    "allowImportingTsExtensions": true, // TypeScriptファイル（.ts拡張子）を直接インポート可能とする
+    "resolveJsonModule": true,
+
+    /* Interop Constraints */
+    "isolatedModules": true,
+
+    /* Emit */
+    "noEmit": true,
+
+    /* TODO: なぜなくても動くか確認 */
+    // "types": ["vite", "vue-router"],
+    // "types": ["types/*"],
+    // "typeRoots": [
+    //   "type/declare",
+    //   "node_modules/@types",
+    //   "node_modules/vite"
+    // ],
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/**/**/*.vue", "src/**/*.vue", "src/*.vue"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/**/**/*.vue",
+    "src/**/*.vue",
+    "src/*.vue",
+    "types/**/*.d.ts",
+  ],
+  "exclude": [
+    "node_modules", // node_modules ディレクトリ以下のファイルとディレクトリ
+    "dist" // dist ディレクトリ以下のファイルとディレクトリ
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
