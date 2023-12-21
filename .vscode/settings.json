@@ -2,10 +2,5 @@
     "cSpell.words": [
         "Chakra",
         "gyokakuryo",
-        "Vetur"
     ],
-    // veturの設定
-    "vetur.validation.template": false,
-    "vetur.useWorkspaceDependencies": true,
-    "vetur.experimental.templateInterpolationService": true
 }

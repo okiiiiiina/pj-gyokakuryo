@@ -1,6 +1,8 @@
 {
   // see: https://www.typescriptlang.org/tsconfig
   "compilerOptions": {
+    "types": ["vite", "vue-router"],
+
     /* Language and Environment */
     "jsx": "preserve",
     "lib": ["ES2020", "DOM", "DOM.Iterable"], // コンパイル時に含める組み込みライブラリを指定
@@ -27,9 +29,9 @@
 
     /* Emit */
     "noEmit": true,
+    
 
     /* TODO: なぜなくても動くか確認 */
-    // "types": ["vite", "vue-router"],
     // "types": ["types/*"],
     // "typeRoots": [
     //   "type/declare",
