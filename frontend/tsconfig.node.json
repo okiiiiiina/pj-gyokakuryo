@@ -1,3 +1,4 @@
+/* tsconfig.node.jsonは、Viteの設定ファイル（vite.config.ts）をTypeScriptで書くための設定が記述されているファイル */
 {
   "compilerOptions": {
     "composite": true,
