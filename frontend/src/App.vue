@@ -1,13 +1,12 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
-    aaa
-    <RouterView/>
+    RouterView表示チェック
+    <RouterView />
   </div>
 </template>
 
