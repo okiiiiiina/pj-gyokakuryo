@@ -2,6 +2,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 
 // ページ
+import Test from "../src/admin-components/pages/Test.vue"
 import CatchReportTable from "../src/admin-components/pages/catch-reports/Table.vue"
 import CatchReportCreate from "../src/admin-components/pages/catch-reports/Create.vue"
 import CatchReportDetail from "../src/admin-components/pages/catch-reports/Detail.vue"
@@ -9,8 +10,8 @@ import CatchReportDetail from "../src/admin-components/pages/catch-reports/Detai
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    component: CatchReportTable,
-    name: "catchReportTable",
+    component: Test,
+    name: "Test",
     meta: {}
   },
   /* 漁獲量報告 */
@@ -18,7 +19,7 @@ const routes: Array<RouteRecordRaw> = [
     path: "/catch-report",
     children: [
       {
-        path: "Table",
+        path: "table",
         component: CatchReportTable,
         name: "catchReportTable",
         meta: {}
