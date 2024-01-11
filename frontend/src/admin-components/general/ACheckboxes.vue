@@ -14,7 +14,6 @@ const modelValue = defineModel<number[]>()
 
 <template>
   <div class="comp-checkboxes">
-    選択：{{ modelValue }}
     <div v-for="option in props.options" :key="option.value" class="checkbox">
       <label :for="`${option.value}`">
         <input
