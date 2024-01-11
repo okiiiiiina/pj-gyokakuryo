@@ -1,13 +1,11 @@
 <script setup lang="ts">
-import { defineProps, defineEmits, defineModel } from 'vue'
+import { defineModel } from 'vue'
+
+import { Checkbox } from '../../../types/admin/general'
 
 const emits = defineEmits([])
 const props = defineProps<{
-  options: Array<{
-    value: string | number
-    label: string
-    disabled: boolean
-  }>
+  options: Checkbox[]
 }>()
 const modelValue = defineModel<number[]>()
 </script>
@@ -32,8 +30,6 @@ const modelValue = defineModel<number[]>()
 </template>
 
 <style lang="scss" scoped>
-@import '@/styles/_variables.scss';
-
 .checkbox {
   position: relative;
 

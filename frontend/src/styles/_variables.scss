@@ -2,10 +2,15 @@
 /*  関数設定
 /*-------------------------------------------*/
 // gray
+
+// $grayHoverL: #f0f1f1;
+// $grayHoverD:
+$darkGray: #8c8d8d;
 $gray:#acaeaf;
-$lightGray: #f0f1f1;
+$lightGray: #cbcbcb;
+$paleGray: #f0f1f1;
 // blue
-$blue: #072a4f;
+$blue: #1e6ec4;
 $lightBlue: #5cbcff;
 // Other
 $black: #000;
@@ -14,12 +19,6 @@ $red: #ff3547;
 $orange: #fa8917;
 
 // テーマ
-$Main: #2e7dc1;
-$MainLight: #c6e5ee;
-$MainDark: #309e9b;
-$Primary: #F2A915;
-$PrimaryLight: #fcefa8;
-$Secondary: #9EC22F;
 $Success: #9EC22F;
 $Danger: $red;
 $Warning: $red;

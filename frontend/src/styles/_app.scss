@@ -25,20 +25,20 @@ body  {
     display: flex;
     flex-direction: column;
 }
-.main {
-    min-height: 100vh;
-    flex: 1;
-}
-.header-area--title{
-    font-size: 20px;
-}
-.table-striped-green > tbody > tr:nth-of-type(odd) {
-    background: $MainLight !important;
-}
-li.page-item.pagination-page-nav.active > .page-link {
-    background: $Main !important;
-    color: #fff !important;
-}
+// .main {
+//     min-height: 100vh;
+//     flex: 1;
+// }
+// .header-area--title{
+//     font-size: 20px;
+// }
+// .table-striped-green > tbody > tr:nth-of-type(odd) {
+//     background: $MainLight !important;
+// }
+// li.page-item.pagination-page-nav.active > .page-link {
+//     background: $Main !important;
+//     color: #fff !important;
+// }
 /*-------------------------------------------*/
 /* FORM
 /*-------------------------------------------*/
@@ -51,7 +51,7 @@ li.page-item.pagination-page-nav.active > .page-link {
 //     color: gray !important;
 // }
 // .form-control::placeholder {
-//     color: $Gray!important;
+//     color: $gray!important;
 // }
 // textarea.form-control {
 //     height: 150px !important;
@@ -99,27 +99,27 @@ li.page-item.pagination-page-nav.active > .page-link {
 /*-------------------------------------------*/
 /*  文字サイズ
 /*-------------------------------------------*/
-// .font-xs {
-//     font-size: $font-xs;
-// }
-// .font-sm {
-//     font-size: $font-sm;
-// }
-// .font-sm {
-//     font-size: $font-sm;
-// }
-// .font-md {
-//     font-size: $font-md; // 項目サイズ想定
-// }
-// .font-lg {
-//     font-size: $font-lg;
-// }
-// .font-xl {
-//     font-size: $font-xl;
-// }
-// .font-xxl {
-//     font-size: $font-xxl;
-// }
+.font-xs {
+    font-size: $font-xs;
+}
+.font-sm {
+    font-size: $font-sm;
+}
+.font-sm {
+    font-size: $font-sm;
+}
+.font-md {
+    font-size: $font-md; // 項目ラベルサイズ
+}
+.font-lg {
+    font-size: $font-lg;
+}
+.font-xl {
+    font-size: $font-xl;
+}
+.font-xxl {
+    font-size: $font-xxl;
+}
 /*-------------------------------------------*/
 /*  検索枠
 /*-------------------------------------------*/
@@ -230,11 +230,11 @@ li.page-item.pagination-page-nav.active > .page-link {
 //     .detail-container{
 //         position:relative;
 //         .catch_report_detail {
-//             background-color: $White;
+//             background-color: $white;
 //             .content {
 //                 padding: 0.5rem;
 //                 text-align: center;
-//                 border-bottom: 1px solid $Gray;
+//                 border-bottom: 1px solid $gray;
 //             }
 //             .selected-fish {
 //                 text-align: left;
@@ -244,20 +244,20 @@ li.page-item.pagination-page-nav.active > .page-link {
 //                 position: relative;
 
 //                 .content {
-//                 border: 1px solid $Gray;
+//                 border: 1px solid $gray;
 //                 border-radius: 10px;
 //                 }
 
 //                 .btn-add {
-//                 color: $White;
+//                 color: $white;
 //                 background-color: $MainDark;
 //                 width: 100%;
 //                 border-radius: 5px;
-//                 // border: 2px solid $Gray;
+//                 // border: 2px solid $gray;
 //                 }
 
 //                 .btn-delete {
-//                 color: $White;
+//                 color: $white;
 //                 background-color: $Danger;
 //                 height: 30px;
 //                 width: 30px;
@@ -281,16 +281,16 @@ li.page-item.pagination-page-nav.active > .page-link {
 //                 position: relative;
 //                 }
 //                 .btn-add {
-//                 color: $Gray;
-//                 background-color: $White;
+//                 color: $gray;
+//                 background-color: $white;
 //                 height: 30px;
 //                 width: 30px;
 //                 border-radius: 50%;
-//                 border: 2px solid $Gray;
+//                 border: 2px solid $gray;
 //                 }
 
 //                 .btn-delete {
-//                 color: $White;
+//                 color: $white;
 //                 background-color: $Danger;
 //                 height: 30px;
 //                 width: 30px;

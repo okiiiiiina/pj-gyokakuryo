@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import MAccordion from '../../../admin-components/general/MAccordion.vue'
+import CAccordion from '../../../admin-components/general/CAccordion.vue'
 
 
 </script>
@@ -15,7 +15,7 @@ import MAccordion from '../../../admin-components/general/MAccordion.vue'
       </div>
     </div>
 
-    <MAccordion />
+    <CAccordion />
 
     <div class="body">
       <div class="pagination"></div>

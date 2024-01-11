@@ -1,15 +1,15 @@
-button{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    padding: 0;
-    appearance: none;
-    &:focus{
-        outline: 0px !important;
-    }
-}
-.btn_style.btn-primary:not([disabled]):not(.disabled):active {
-    background-color: $Primary !important;
-    border-color: $Primary;
-}
+// button{
+//     background-color: transparent;
+//     border: none;
+//     cursor: pointer;
+//     outline: none;
+//     padding: 0;
+//     appearance: none;
+//     &:focus{
+//         outline: 0px !important;
+//     }
+// }
+// .btn_style.btn-primary:not([disabled]):not(.disabled):active {
+//     background-color: $Primary !important;
+//     border-color: $Primary;
+// }
