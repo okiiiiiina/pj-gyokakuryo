@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // import { defineProps } from 'vue'
-import AButton from '@/src/admin-components/general/AButton.vue'
-import ADropdown from '@/src/admin-components/general/ADropdown.vue'
+import AButton from '@/components/admin/general/AButton.vue'
+import ADropdown from '@/components/admin/general/ADropdown.vue'
 
 const clickBtn = () => {
   // ここにメソッドの処理を記述

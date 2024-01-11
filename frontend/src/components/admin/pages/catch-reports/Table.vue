@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import CAccordion from '../../../admin-components/general/CAccordion.vue'
-
-
+import CAccordion from '@/components/admin/general/CAccordion.vue'
 </script>
 
 <template>

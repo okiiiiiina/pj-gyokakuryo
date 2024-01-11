@@ -1,7 +1,18 @@
 {
   // see: https://www.typescriptlang.org/tsconfig
   "compilerOptions": {
+    "baseUrl": "./src",
     "types": ["vite", "vue-router"],
+    // "typeRoots": [
+    //   "src/types/declare",
+    //   "node_modules/@types",
+    //   "node_modules/.vite"
+    // ],
+
+    "paths": {
+      "@/types/*": ["types/*"],
+      "@/router/*": ["router/*"]
+    },
 
     /* Language and Environment */
     "jsx": "preserve",
@@ -29,15 +40,6 @@
 
     /* Emit */
     "noEmit": true,
-    
-
-    /* TODO: なぜなくても動くか確認 */
-    // "types": ["types/*"],
-    // "typeRoots": [
-    //   "type/declare",
-    //   "node_modules/@types",
-    //   "node_modules/vite"
-    // ],
   },
   "include": [
     "src/**/**/**/*.vue",
@@ -46,8 +48,8 @@
     "src/*.ts",
     "src/**/*.ts",
     "src/**/*.tsx",
-    "types/**/*.d.ts",
-    "types/**/*.ts",
+    // "src/types/**/*.d.ts",
+    // "src/types/**/*.ts",
     "src/*.ext",
   ],
   "exclude": [

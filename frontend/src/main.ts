@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import router from '../router/index.ts'
+import router from '@/router/index.ts'
 import Chakra from '@chakra-ui/vue-next'
 import App from './App.vue'
 // import '@/src/styles/index.scss' // 効いてない

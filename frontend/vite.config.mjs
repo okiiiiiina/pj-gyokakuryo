@@ -17,14 +17,15 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import '@/src/styles/index.scss';`,
+        additionalData: `@import '@/styles/index.scss';`,
       },
     },
   },
   resolve: {
     alias: {
-      '@': `${__dirname}`,
-      '@/src/styles': `${__dirname}/src/styles`,
+      '@': `${__dirname}/src`,
+      '@/styles': `${__dirname}/src/styles`,
+      // '@/types': `${__dirname}/src/types`, // これ書いても意味ないのでtsconfigでpath指定
     },
   },
 })

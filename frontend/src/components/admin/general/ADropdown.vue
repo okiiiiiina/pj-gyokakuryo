@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { defineModel } from 'vue'
 
-import { Dropdown } from '../../../types/admin/general.ts'
+import { Dropdown } from '@/types/admin/general.ts'
 
 const emits = defineEmits([])
 const props = defineProps<{

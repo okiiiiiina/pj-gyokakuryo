@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { defineModel } from 'vue'
 
-import { Checkbox } from '../../../types/admin/general'
+import { Checkbox } from '@/types/admin/general.ts'
 
 const emits = defineEmits([])
 const props = defineProps<{

@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-import CAccordion from '../../admin-components/general/CAccordion.vue'
-import ATable from '../../admin-components/general/ATable.vue'
-import ACheckboxes from '../../admin-components/general/ACheckboxes.vue'
-import MChatchReportRow from '../../admin-components/pages/catch-reports/parts/MChatchReportRow.vue'
+import CAccordion from '@/components/admin/general/CAccordion.vue'
+import ATable from '@/components/admin/general/ATable.vue'
+import ACheckboxes from '@/components/admin/general/ACheckboxes.vue'
+import MChatchReportRow from '@/components/admin/pages/catch-reports/parts/MChatchReportRow.vue'
 
 interface CatchReport {
   id: number
