@@ -3,7 +3,7 @@ import { ref, defineProps, defineEmits } from 'vue'
 
 const emits = defineEmits(['update:modelValue'])
 const props = defineProps<{
-  modelValue: number[]
+  modelValue: string | number[]
   options: Array<{
     value: string | number
     label: string
@@ -11,7 +11,7 @@ const props = defineProps<{
   }>
 }>()
 
-const selectedIds = ref<number[]>(props.modelValue || [])
+const selectedIds = ref<string | number[]>(props.modelValue || [])
 </script>
 
 <template>

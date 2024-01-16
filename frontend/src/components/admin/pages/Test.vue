@@ -1,16 +1,26 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-import CAccordion from '@/components/admin/general/CAccordion.vue'
+import { HeaderItem } from '@/types/admin/general.ts'
+
 import ATable from '@/components/admin/general/ATable.vue'
 import ACheckboxes from '@/components/admin/general/ACheckboxes.vue'
-import MChatchReportRow from '@/components/admin/pages/catch-reports/parts/MChatchReportRow.vue'
+import ADropdown from '@/components/admin/general/ADropdown.vue'
+import CAccordion from '@/components/admin/general/CAccordion.vue'
+import MChatchReportTableRow from '@/components/admin/pages/catch-reports/parts/MChatchReportTableRow.vue'
 
-interface CatchReport {
-  id: number
+// interface CatchReport {
+//   id: number
+//   name: string
+//   catch: number
+//   test: string
+// }
+
+interface RowData {
   name: string
-  catch: number
-  test: string
+  text: string
+  dropdown: number | null
+  number: number
 }
 
 interface StatusType {
@@ -19,38 +29,46 @@ interface StatusType {
   disabled: boolean
 }
 
-const optionsOfCheckbox = ref<Array<StatusType>>([
+const optionsOfCheckbox = ref<StatusType[]>([
   { value: 1, label: 'aaa', disabled: false },
   { value: 2, label: 'ddd', disabled: false },
   { value: 3, label: 'ccc', disabled: false },
 ])
 
-const optionsOfDropdown = ref<Array<StatusType>>([
+const optionsOfDropdown = ref<StatusType[]>([
   { value: 1, label: 'ddd', disabled: false },
   { value: 2, label: 'eee', disabled: false },
   { value: 3, label: 'fff', disabled: false },
 ])
 
-const tBodyData = ref<Array<CatchReport>>([
-  { id: 1, name: 'aaa', catch: 100, test: 'data' },
-  { id: 1, name: 'aaa', catch: 100, test: 'data' },
-  { id: 1, name: 'aaa', catch: 100, test: 'data' },
-  { id: 1, name: 'aaa', catch: 100, test: 'data' },
-  { id: 1, name: 'aaa', catch: 100, test: 'data' },
-  { id: 1, name: 'aaa', catch: 100, test: 'data' },
-  { id: 1, name: 'aaa', catch: 100, test: 'data' },
-  { id: 1, name: 'aaa', catch: 100, test: 'data' },
-  { id: 1, name: 'aaa', catch: 100, test: 'data' },
-  { id: 1, name: 'aaa', catch: 100, test: 'data' },
-  { id: 1, name: 'aaa', catch: 100, test: 'data' },
-  { id: 1, name: 'aaa', catch: 100, test: 'data' },
+const tBodyData = ref<RowData[]>([
+  { name: 'aaa', text: 'tet', dropdown: 1, number: 100 },
+  { name: 'aaa', text: 'tet', dropdown: 2, number: 100 },
+  { name: 'aaa', text: 'tet', dropdown: 3, number: 100 },
+  { name: 'aaa', text: 'tet', dropdown: null, number: 100 },
+  { name: 'aaa', text: 'tet', dropdown: 1, number: 100 },
+  { name: 'aaa', text: 'tet', dropdown: 1, number: 100 },
+  { name: 'aaa', text: 'tet', dropdown: 1, number: 100 },
+  { name: 'aaa', text: 'tet', dropdown: 1, number: 100 },
+  { name: 'aaa', text: 'tet', dropdown: 1, number: 100 },
+  { name: 'aaa', text: 'tet', dropdown: 1, number: 100 },
+  { name: 'aaa', text: 'tet', dropdown: 1, number: 100 },
+  { name: 'aaa', text: 'tet', dropdown: 1, number: 100 },
+])
+
+const tHeadData = ref<HeaderItem[]>([
+  { name: '名前', key: 'name', sortable: true },
+  { name: 'テキスト', key: 'text', sortable: true },
+  { name: 'ドロップダウン', key: 'dropdown', sortable: true },
+  { name: '数字', key: 'number', sortable: true },
 ])
 
 const selectedIds = ref<number[]>([1])
-// const handleUpdateModelValue = (value: number[]) => {
-//   // @update:modelValue イベントのハンドラ
-//   selectedIds.value = value
-// }
+const selectedId = ref<string | number | null>(null)
+
+const clickTh = (event: string) => {
+  console.log('このkeyがクリックされた', event)
+}
 </script>
 
 <template>
@@ -63,6 +81,7 @@ const selectedIds = ref<number[]>([1])
         <!-- ヘッダー ユーザアイコン -->
       </div>
     </div>
+    <ADropdown v-model="selectedId" :options="optionsOfDropdown"></ADropdown>
 
     <ACheckboxes v-model="selectedIds" :options="optionsOfCheckbox" />
     <!-- @update:modelValue="selectedIds = $event" -->
@@ -71,22 +90,14 @@ const selectedIds = ref<number[]>([1])
 
     <div class="body">
       <div class="pagination"></div>
-      <ATable>
-        <template #thead>
-          <tr class="tr">
-            <th>ID</th>
-            <th>名前</th>
-            <th>名前</th>
-            <th>名前</th>
-          </tr>
-        </template>
+      <ATable :theadData="tHeadData" @click-th="clickTh">
         <template #tbody>
-          <MChatchReportRow
-            v-for="(test, index) in tBodyData"
+          <MChatchReportTableRow
+            v-for="(data, index) in tBodyData"
             :key="index"
-            :row-data="test"
+            :row-data="data"
             :options="optionsOfDropdown"
-          ></MChatchReportRow>
+          ></MChatchReportTableRow>
         </template>
       </ATable>
       <div class="pagination"></div>

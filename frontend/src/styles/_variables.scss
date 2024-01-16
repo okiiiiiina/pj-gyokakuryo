@@ -6,12 +6,12 @@
 // $grayHoverL: #f0f1f1;
 // $grayHoverD:
 $darkGray: #8c8d8d;
-$gray:#acaeaf;
+$gray: #acaeaf;
 $lightGray: #cbcbcb;
 $paleGray: #f0f1f1;
 // blue
-$blue: #1e6ec4;
-$lightBlue: #5cbcff;
+$blue: #5c9cd8;
+$lightBlue: #83aed6;
 // Other
 $black: #000;
 $white: #fff;
@@ -19,7 +19,7 @@ $red: #ff3547;
 $orange: #fa8917;
 
 // テーマ
-$Success: #9EC22F;
+$Success: #9ec22f;
 $Danger: $red;
 $Warning: $red;
 
@@ -47,44 +47,44 @@ $small-min: 577px;
 $small: 576px;
 
 @mixin xlarge-min {
-    @media (min-width: ($xlarge-min)) {
-        @content;
-    }
+  @media (min-width: ($xlarge-min)) {
+    @content;
+  }
 }
 @mixin xlarge {
-    @media (max-width: ($xlarge)) {
-        @content;
-    }
+  @media (max-width: ($xlarge)) {
+    @content;
+  }
 }
 @mixin large-min {
-    @media (min-width: ($large-min)) {
-        @content;
-    }
+  @media (min-width: ($large-min)) {
+    @content;
+  }
 }
 @mixin large {
-    @media (max-width: ($large)) {
-        @content;
-    }
+  @media (max-width: ($large)) {
+    @content;
+  }
 }
 @mixin medium-min {
-    @media (min-width: ($medium-min)) {
-        @content;
-    }
+  @media (min-width: ($medium-min)) {
+    @content;
+  }
 }
 @mixin medium {
-    @media (max-width: ($medium)) {
-        @content;
-    }
+  @media (max-width: ($medium)) {
+    @content;
+  }
 }
 @mixin small-min {
-    @media (min-width: ($small-min)) {
-        @content;
-    }
+  @media (min-width: ($small-min)) {
+    @content;
+  }
 }
 @mixin small {
-    @media (max-width: ($small)) {
+  @media (max-width: ($small)) {
     @content;
-    }
+  }
 }
 
 // 使い方

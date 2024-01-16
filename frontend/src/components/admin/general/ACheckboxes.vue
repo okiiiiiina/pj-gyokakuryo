@@ -7,7 +7,7 @@ const emits = defineEmits([])
 const props = defineProps<{
   options: Checkbox[]
 }>()
-const modelValue = defineModel<number[]>()
+const modelValue = defineModel<string | number[]>()
 </script>
 
 <template>

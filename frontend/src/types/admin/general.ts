@@ -11,3 +11,11 @@ export type Dropdown = {
   label: string
   disabled?: boolean
 }
+/* 
+テーブル
+*/
+export type HeaderItem = {
+  name: string
+  key: string
+  sortable: boolean
+}
