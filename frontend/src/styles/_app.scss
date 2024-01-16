@@ -1,0 +1,461 @@
+@import "_variables";
+@import "reset";
+
+/*-------------------------------------------*/
+/*  目次
+/*-------------------------------------------*/
+// 共通
+// FORM
+// 文字サイズ
+// 検索枠
+// 管理画面（一覧ページ）
+// その他
+// お知らせ（HOME）
+// 操業報告
+// Google Map
+// ドラムロール
+/*-------------------------------------------*/
+/*  共通
+/*-------------------------------------------*/
+html, body {
+    height: 100%;
+}
+body  {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+// .main {
+//     min-height: 100vh;
+//     flex: 1;
+// }
+// .header-area--title{
+//     font-size: 20px;
+// }
+// .table-striped-green > tbody > tr:nth-of-type(odd) {
+//     background: $MainLight !important;
+// }
+// li.page-item.pagination-page-nav.active > .page-link {
+//     background: $Main !important;
+//     color: #fff !important;
+// }
+/*-------------------------------------------*/
+/* FORM
+/*-------------------------------------------*/
+// .form-control:disabled, .form-control[readonly] {
+//     background-color: #f9f9f9 !important;
+//     color: gray;
+//     opacity: 1;
+// }
+// .form-date_picker:disabled{
+//     color: gray !important;
+// }
+// .form-control::placeholder {
+//     color: $gray!important;
+// }
+// textarea.form-control {
+//     height: 150px !important;
+//     margin-bottom: 30px;
+// }
+// .form-label {
+//     margin-bottom: 0.25rem;
+//     font-weight: bold;
+//     font-size:$font-md ;
+// }
+/*-------------------------------------------*/
+/* その他
+/*-------------------------------------------*/
+// .sort-header {
+//     cursor: pointer;
+// }
+// .required-info {
+//     font-size: smaller;
+//     padding: 0.3rem;
+//     border-radius: 0.3rem;
+//     background: #e5e5e5;
+// }
+// .error-message {
+//     color: $Warning;
+//     font-size: 13px;
+// }
+// .pointer {
+//     cursor: pointer;
+// }
+// .rounded-4 {
+//     border-radius: 4px;
+// }
+// .rounded-10 {
+//     border-radius: 10px;
+// }
+// // その他不明
+// .vue-treeselect--disabled {
+//     .vue-treeselect__single-value{
+//         color: gray !important;
+//     }
+// }
+// .pagination .page-item .page-link {
+//     z-index: auto;
+// }
+/*-------------------------------------------*/
+/*  文字サイズ
+/*-------------------------------------------*/
+.font-xs {
+    font-size: $font-xs;
+}
+.font-sm {
+    font-size: $font-sm;
+}
+.font-sm {
+    font-size: $font-sm;
+}
+.font-md {
+    font-size: $font-md; // 項目ラベルサイズ
+}
+.font-lg {
+    font-size: $font-lg;
+}
+.font-xl {
+    font-size: $font-xl;
+}
+.font-xxl {
+    font-size: $font-xxl;
+}
+/*-------------------------------------------*/
+/*  検索枠
+/*-------------------------------------------*/
+// サイズ
+// .form-small {
+//     width: 33%;
+//     @include small {
+//         width: 100%;
+//     }
+// }
+// .form-middle {
+//     width: 50%;
+//     @include small {
+//         width: 100%;
+//     }
+// }
+// .form-large {
+//     width: 100%;
+// }
+/*-------------------------------------------*/
+/*  管理画面（一覧ページ）
+/*-------------------------------------------*/
+// .table-wrapper{
+//     position: relative;
+//     .table-inner-wrapper {
+//         overflow-x: scroll;
+//         table{
+//             tr,td {
+//                 white-space: nowrap;
+//             }
+//         }
+//     }
+//     .over-flowed {
+//         height: 100%;
+//         width: 10%;
+//         position: absolute;
+//         right: 0%;
+//         top: 0;
+//         background: linear-gradient(to right, #ffffff00 0%, #e3e3e3 100%);
+//         border-right: 3px solid #e3e3e3;
+//     }
+// }
+
+// /*-------------------------------------------*/
+// /*  お知らせ（HOME）
+// /*-------------------------------------------*/
+// .notification {
+//     .title {
+//         font-size: 1rem;
+//         color: darken($Main, 20%);
+//         font-weight: bold;
+//         &.emergent{
+//             color: darken($Red, 20%);
+//         }
+//     }
+//     .notification-wrapper {
+//         border: 2px solid #ededed;
+//         &.emergent{
+//             border: 2px solid darken($Red, 20%);
+//             background: lighten($Red, 35%);
+//             .n-title {
+//                 color: darken($Red, 30%) !important;
+//             }
+//         }
+//         .notification-card {
+//             border-bottom: 1px solid #ededed;
+//             cursor: pointer;
+//             .n-title {
+//                 font-size: 0.9rem;
+//                 color: darken($Main, 20%);
+//                 text-decoration: underline;
+//             }
+//             &:last-child {
+//                 border-bottom: none
+//             }
+//             &.unread {
+//                 position: relative;
+//                 &:before {
+//                     content: "●";
+//                     color: $Red;
+//                     position: absolute;
+//                     top: 6%;
+//                     right: 1%;
+//                     font-size: 0.3rem;
+//                     text-shadow: 0px 0px 2px $Red;
+//                 }
+//             }
+
+//             &.emergent {
+//                 background: lighten($Red, 35%);
+//             }
+//         }
+//     }
+// }
+
+// /*-------------------------------------------*/
+// /*  操業報告
+// /*-------------------------------------------*/
+// .catch_report {
+//     background-color: $LightGray;
+//     .operating-datetime-error {
+//         background-color: #ef6a6a;
+//         border-radius: 10px;
+//         font-size: 14px;
+//         color: white;
+//         font-weight: bold;
+//     }
+//     .detail-container{
+//         position:relative;
+//         .catch_report_detail {
+//             background-color: $white;
+//             .content {
+//                 padding: 0.5rem;
+//                 text-align: center;
+//                 border-bottom: 1px solid $gray;
+//             }
+//             .selected-fish {
+//                 text-align: left;
+//             }
+
+//             .catch_report_detail_fish {
+//                 position: relative;
+
+//                 .content {
+//                 border: 1px solid $gray;
+//                 border-radius: 10px;
+//                 }
+
+//                 .btn-add {
+//                 color: $white;
+//                 background-color: $MainDark;
+//                 width: 100%;
+//                 border-radius: 5px;
+//                 // border: 2px solid $gray;
+//                 }
+
+//                 .btn-delete {
+//                 color: $white;
+//                 background-color: $Danger;
+//                 height: 30px;
+//                 width: 30px;
+//                 border-radius: 50%;
+//                 position: absolute;
+//                 top: -10px;
+//                 right: -5px;
+//                 }
+//             }
+//             .catch_report_detail_point_map {
+//                 .count-point {
+//                 top: 0;
+//                 color: black;
+//                 font-weight: bold;
+//                 background-color: white;
+//                 border-radius: 50px;
+//                 }
+//             }
+//             .catch_report_detail_point_river {
+//                 .dd-box {
+//                 position: relative;
+//                 }
+//                 .btn-add {
+//                 color: $gray;
+//                 background-color: $white;
+//                 height: 30px;
+//                 width: 30px;
+//                 border-radius: 50%;
+//                 border: 2px solid $gray;
+//                 }
+
+//                 .btn-delete {
+//                 color: $white;
+//                 background-color: $Danger;
+//                 height: 30px;
+//                 width: 30px;
+//                 border-radius: 50%;
+//                 position: absolute;
+//                 bottom: 3px;
+//                 left: 85%;
+//                 }
+//             }
+//             .btn-main-dark {
+//                 &:hover {
+//                 color: white !important;
+//                 background-color: $MainDark !important;
+//                 border: 2px solid $MainDark;
+//                 font-weight: bold;
+//                 }
+//             }
+//         }
+//     }
+//     .send-status {
+//         color: white;
+//         font-weight: bold;
+//         padding: 1rem;
+//         background: $Main;
+//         width: fit-content;
+//         height: fit-content;
+//         &.sended {
+//             background: $Red;
+//         }
+//     }
+// }
+// .has-error {
+//     input {
+//         background-color: #ffe0e0;
+//     }
+//     .vue-treeselect__control{
+//         background-color: #ffe0e0;
+//     }
+// }
+// input.has-error {
+//     background-color: #ffe0e0;
+// }
+
+// /*-------------------------------------------*/
+// /*  Google Map
+// /*-------------------------------------------*/
+// div.pane {
+//     border-bottom: solid 1px gray;
+//     padding: 8px;
+// }
+
+// .title_banner {
+//     font-size: 20px;
+//     font-weight: bold;
+//     height: 32px;
+// }
+
+// #address_box,
+// #meshcode_box {
+//     width: 150px;
+// }
+
+// div.mesh {
+//     position: absolute;
+//     border: solid 0.1px #84888b70;
+//     overflow: hidden;
+//     box-sizing: content-box !important;
+// }
+
+// div.mesh div {
+//     text-align: center;
+//     font-size: 8px;
+// }
+
+// .mesh-code {
+//     font-size: large;
+//     margin-top: 15px;
+//     margin-bottom: 15px;
+// }
+
+// .mesh-code-selected {
+//     background-color: $Danger;
+// }
+
+// span.bounds {
+// display: none;
+// }
+
+// .map .google-map {
+//     box-sizing: content-box !important;
+// }
+
+// /*-------------------------------------------*/
+// /* ドラムロール
+// /*-------------------------------------------*/
+// // inputフォーム
+// .input-date-picker .v-drumroll-picker__input {
+//     padding: 0px !important;
+//     background-color: #fff !important;
+//     text-align: left !important;
+//     box-shadow: none !important;
+// }
+// // ドラムロールの部分
+// .v-drumroll-picker__content {
+//     display: block;
+//     bottom: 0;
+//     width: 100vw;
+//     top: 75vh;
+//     font-size: larger;
+//     z-index: 999999;
+//     font-size: $font-lg;
+//     font-weight: normal;
+//     .v-drumroll-picker__container {
+//         height: 25vh !important;
+//         background: #eaefff !important;
+//         .v-drumroll-picker__button {
+//             font-weight: bold;
+//             color: white;
+//             width: 5rem;
+//             height: 2rem;
+//             margin: 0.5rem;
+//             padding: 0.4rem 1.5rem;
+//             border-radius: 5%;
+//             border: none !important;
+//             background-color: #fff;
+//             &::before {
+//                 content: "決定";
+//                 font-size: $font-md;
+//                 font-weight: bold;
+//                 color: #fff;
+//                 border-radius: 10px;
+//                 background-color: #6a8af7;
+//                 opacity: 0.8;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+//             }
+//             &:hover:before {
+//                 color: #fff;
+//                 background-color: #6a8af7;
+//                 opacity: 0.8;
+//             }
+//         }
+//         .vue-scroll-picker-group {
+//             height: 25vh !important;
+//             margin-right: 0 !important;
+//             .vue-scroll-picker {
+//                 height: 25vh !important;
+//                 margin: 0 0.1rem;
+//                 .-selected {
+//                     color: #6a8af7;
+//                     font-weight: bold;
+//                     font-size: $font-lg;
+//                 }
+//             }
+//         }
+//         .vue-scroll-picker-layer {
+//             .top {
+//                 border: none;
+//                 background: linear-gradient(0deg, rgba(255, 255, 255, 0.6) 10%, rgba(255, 255, 255, 0.9)) !important;
+//             }
+//             .bottom {
+//                 border: none;
+//                 background: linear-gradient(0deg, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.6)) !important;
+//             }
+//         }
+//     }
+// }
